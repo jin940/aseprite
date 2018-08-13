@@ -9,7 +9,7 @@ env:
   global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
    #   via the "travis encrypt" command using the project repo's public key
-   - secure: "k5ex1n5MKQrHUC4ywo5KffGoTQdfwzoeV1Zt8Am1lcbl13DMpf+ZH7pv7tAPy8OTNvNq4Ep6QrPX9DeEPSdUYNuLshV/nfdU48zatdGeGJ21Dv/OovM2bhtrt6qTMGxEkeuEnG8P2Oy+kcoJ8X2YPpe2Lmn+1hB63A9I+tfHXZBKb38qqw7IZir8tkx1rmV7KYkQIPPAYsy7wOm0YU271iqyMaDcru89ZDouoKCaLsJnQcqvDCb/gjuTSnOqm2fMdGm4RqtlbQrz79iFBuJNAD61XSC+zpm4b30xd25mk2eCQMZqvoM3BLJskKKgy8GDWVjzhV/fPqy1d6Bg7IYeDR9FV4ILLXw7wwnbfRkJ34bTxkq2aGAL6eEkndQOesIXtH5Izrp9eGmpdOiY4vIYd8saoxX+KgNzdyygWnHrxDMJuYG4U93rJ+UyXnt0QVm831o0O+u2LdAKRyoP+eEJpJXLKk9HGozNoRhUs3AvTJXC/avyqvwpaG3IIalvWFiQqnPbSb2FK3n1wbwSMgggpngBjvVx+YcEp9pfEMNeic+u7D3NpWIBG0KZioNCRD9wvd12Rn1Y9kI6FBlk0vvPhNJXSTROEkiU61AvuPf1ahvhHSEjQkKfDIvAA2+AP+Y26Om5ORKIFQrY001QgzlC32obDF3eqvAHv+MLnGCTa1g="
+   - secure: "btPWieD8LaCpZQqV2e2MwbGZRIDIDPcLnbFy5Sr9UEVK3MTFuKW7ZrJwnzL5HyUaPXc7dn8mqnz/YPW/h+41dEENq+SNpEAJLk6HhXOh2sws+W7MXkUEM9Jwbq38mdhdJ7wxIRMV3qct0dYS4e+ljYmV4UUWiwEQ7QeJr4PcH5hOxtZ3ma0j865qvO5ee3UtrMbJy62JnrUxGCNMQ8mdPDqrPoC6RcJg11l+140TiMWT+/WODT1ZcTFGiryd1EFo7RWmBjV/RKwE1F7xchuLn2tGRBL8sw3TzcmjkwHBJQMLlVCiId3NVs5rxvHINcxLlxoJy8RcVQWMBPnBrcysld5ECRv9/6B2YPaCTBPEvHZKnM54UpLvWqDkh1prClfWCZzodCVEYCqeCFmAAXPPiuIFi0c4QPcBakI00KohY5GF9cVkXubwTQwZrswGI6Sykwuv+l9H8G21T1lezYE9RX5B7EtyHRP2CX4USp9wB0WXkE1nhSf8CxC5pouQRIPFjwYnczE8dmCu1cBuPl2GYcVqi3xpy9uGn0RHVUaS/5Bm78N+2xfFJr88d2KYgiJKKapO2ZD0bHjSg2NbfGjn+Hu+l1f1GEZf9wt2NTJ564JGEBFORlQZTem63VzPqxhOp3biSHKt41wCkUyZmLbPvzQTpw8zJqSuBB1tbKVWEyQ="
    
   matrix:
     - ENABLE_UI=OFF
@@ -25,7 +25,7 @@ before_install:
 addons:
   coverity_scan:
       project:
-        name: "chongx1an/aseprite"
+        name: "chongx1an/asepriteProject"
         description: "Animated sprite editor & pixel art tool (Windows, macOS, Linux)"
       notification_email: ch0ngx1an@hotmail.com
       build_command_prepend: 
