@@ -9,8 +9,8 @@ env:
   global:
     # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
     #   via the "travis encrypt" command using the project repo's public key
-    - secure: "k5a0SDvgztFEgJpYWfOB0+aR9gCtD1IlPdelAe1FGT+q8UzXS7/CYvGrf3QLg6rD/ODQefJ3MwW/6Og5i/ifucGlslj0cbJTuY/3ZahSpiWekuus33Ioco8u0LcBV7ErdfNHANVsoI4WqNooRD1+tGmWIIlwpRx1y1C6Vwm5WPfYV4xZcJtSsBPWDm+7CHNDe64ucVrIadtaoINZoV0lE4oJCmVMf09mNLX3+qpZEARfj3NB/60ERd14f3X680yMbbWTU6aoIsjnC/AG0LIwTAYdtM+PBGwN9Bqi+kqhERNQ1I0EdhGVxMloDvYb2rLlN6gyks1pbSVJtUUC1BjlJae07SsD6i07ssOhs1gMPKwBkBj3yUeNthJ8XLGQprDzJW5zHANkcrLwKZgKT9qVt5i9o+0vqZMvLpbzkliYk1J+7U76gwu72mVrYWYZqIXbac5ZY86oRjSC98dAs4lTWIZ+YByG/syB3ptaom9VNpPsmCSXoKGKr46HkDOFTjw/nNTPL1NbvBV9PfMNOUCuPzzSZJXLV6jZzeZFlniAyGbFBRBt96fcMTPbXGDtOy2UPxXcraVSuUGep6RcyqZiDBzH/4IC3ajIjzZppZNXKy+/p9R/l018bCaWl4fo7E4DKeM4CHFpLO9Pqh4DZPBEtMVugviNB21gx2oKLM9M9SM="
-    
+    - secure: "VKbgWygGncf7s/CVdwQkKUOPIsH0DPyQkSh0o0Wvy69dfVw2qJ5P8dTQ+0LfUBxk2jErJ6iBS4rqnTPzp0wXpiI3RxQn2XuMNTLR+jcPNrpKW5iK1EcZZvaIarL03JRsbBdxfJf7EfLrGO3wG9ofCxG2cKwaUZSdG0i49leL2kpgp8CmApCCEPE9oKSaq4Oz0yW6jkxNhnbcFDKWtXHFoR1/TocqZuMvY5z6Rr3atFZRjsUGG+H52ji4bUx1cO+9b4o+OIsHInN7gSzORyV3tXj0hukWvAQvlu21nUHAb4WeNC7t5y/LRfPqLPwB7OrITuQ3vjKVMMsh7Sy4FoREIysqyWRY8dxSt0Clrd//dRG1KMovmcfGWKBJlVhXi070g4DaSdWW9VOxxHlp9KZBYi/R4GMtOinrjDA1F33Z8SXomoQU0xCxHKkSzZa6DWlu8fCut6I21HMQx82vfYDQAKLiYgg6AVBrtT5L0Qs9NrvL7EglvdD64X4wAv3vm13hArBA6v1O1HtlxGNgDsugMWcMy5bA76WDl7PNmRHwwFWR0IHm3lNKDHUoPgLb3BTEsiBGIe0Dq826XAZwqxLboz0lnxiZL9O2q64yS4aJLrqq3UYrj+lsdt0g0tUrChFsuiYPrqlOSeUqoW0kNaH1DiQbPKEBj2PoLfQ9KqH9WZQ="
+
   matrix:
     - ENABLE_UI=OFF
     - ENABLE_UI=ON
@@ -30,11 +30,11 @@ before_script:
 coverity_scan:
     project:
       name: "chongx1an/aseprite"
-      description: "<Your project description here>"
+      description: "Animated sprite editor & pixel art tool (Windows, macOS, Linux)"
     notification_email: ch0ngx1an@hotmail.com
-    build_command_prepend: "<Your build preprocessing command here>"
-    build_command: "<Your build command here>"
-    branch_pattern: coverity_scan
+    build_command_prepend: 
+    build_command: "make"
+    branch_pattern: travis_test
     
 script:
   - make
