@@ -9,7 +9,7 @@ env:
   global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
    #   via the "travis encrypt" command using the project repo's public key
-   - secure: "LJzFw1s+7B+DlvLyXCni4vJfxIAT0cUvkOU09OlqRTR9x8o31MWCNJgOXaEAtly+BGDjFEIkIU6OuMSrutDwMdc+zRQrpZ/NNUmZHJ8bSxHKsHJkMs0Asuto8CXsEv18oQnTgZCS+FLCBaqRLsIA+ZWAqOpzs/Zccgh8Qzrm3HwuQCmxTlFq3FQjVmGwwTYDFAxoxjviIjBn6RlIqIV5MRkkuGgrSWv+NUCpivDpkbrkR98HcleE153q4aRLSD41MV3ItAM2ceLHYo+AX10dqwfaEK24KNgs7/TDmB/YeP5iVwREpcs4YeLfuBanesrJTXhc9asH0IbSV9xsIQRB4Wa6N8V02cmScj6Ye1vgODWrFghAxO/pLAqOenaBn5Q3L+99Pd1q0t3qjhawE9oKpbyBIPgEjhgky1pOdzvkD32QwUb5S+Nmh/lleCpvWNKO7Zl4XFADfmaWersIEmfT6GnC3CfwGIcwHSUBdbgusKrFmzsMD1mYXAfxsQ9RGkgvIHslEomDfMEhbf9pwpB9Enipa51CfIJQMgzwbXWARvZOTyg3IgXbVa8yoTJ9QtMaSd1wdxVYHBhlptQ74Q0e7xF0W22/n/JjKxbdAI7hagHWRNOhdKw5EtyDkPNdTuKLU0LWllpqcv8lb7koyNSgjOzvNoxX3VTAx5AJ82Jb35Q="
+   - travis encrypt SOMEVAR="byezogGQKAZB7Df9GNJmDA"
 
   matrix:
     - ENABLE_UI=OFF
