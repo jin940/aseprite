@@ -9,7 +9,7 @@ env:
   global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
    #   via the "travis encrypt" command using the project repo's public key
-   - travis encrypt SOMEVAR="byezogGQKAZB7Df9GNJmDA"
+   - travis encrypt COVERITY_SCAN_TOKEN="byezogGQKAZB7Df9GNJmDA"
 
   matrix:
     - ENABLE_UI=OFF
