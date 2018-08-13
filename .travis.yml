@@ -6,6 +6,11 @@ compiler:
   - gcc
 
 env:
+  global:
+    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+    #   via the "travis encrypt" command using the project repo's public key
+    - secure: "k5a0SDvgztFEgJpYWfOB0+aR9gCtD1IlPdelAe1FGT+q8UzXS7/CYvGrf3QLg6rD/ODQefJ3MwW/6Og5i/ifucGlslj0cbJTuY/3ZahSpiWekuus33Ioco8u0LcBV7ErdfNHANVsoI4WqNooRD1+tGmWIIlwpRx1y1C6Vwm5WPfYV4xZcJtSsBPWDm+7CHNDe64ucVrIadtaoINZoV0lE4oJCmVMf09mNLX3+qpZEARfj3NB/60ERd14f3X680yMbbWTU6aoIsjnC/AG0LIwTAYdtM+PBGwN9Bqi+kqhERNQ1I0EdhGVxMloDvYb2rLlN6gyks1pbSVJtUUC1BjlJae07SsD6i07ssOhs1gMPKwBkBj3yUeNthJ8XLGQprDzJW5zHANkcrLwKZgKT9qVt5i9o+0vqZMvLpbzkliYk1J+7U76gwu72mVrYWYZqIXbac5ZY86oRjSC98dAs4lTWIZ+YByG/syB3ptaom9VNpPsmCSXoKGKr46HkDOFTjw/nNTPL1NbvBV9PfMNOUCuPzzSZJXLV6jZzeZFlniAyGbFBRBt96fcMTPbXGDtOy2UPxXcraVSuUGep6RcyqZiDBzH/4IC3ajIjzZppZNXKy+/p9R/l018bCaWl4fo7E4DKeM4CHFpLO9Pqh4DZPBEtMVugviNB21gx2oKLM9M9SM="
+    
   matrix:
     - ENABLE_UI=OFF
     - ENABLE_UI=ON
@@ -20,7 +25,17 @@ before_script:
   - mkdir build
   - cd build
   - cmake .. -DENABLE_TESTS=ON -DENABLE_UI=$ENABLE_UI
+  - echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 
+coverity_scan:
+    project:
+      name: "chongx1an/aseprite"
+      description: "<Your project description here>"
+    notification_email: ch0ngx1an@hotmail.com
+    build_command_prepend: "<Your build preprocessing command here>"
+    build_command: "<Your build command here>"
+    branch_pattern: coverity_scan
+    
 script:
   - make
   - |
@@ -32,3 +47,4 @@ script:
         bash run-tests.sh
       fi
     fi
+    
