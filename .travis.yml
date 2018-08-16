@@ -38,6 +38,7 @@ before_script:
   - mkdir build
   - cd build
   - cmake .. -DENABLE_TESTS=ON -DENABLE_UI=$ENABLE_UI
+  - cmake -DENABLE_COVERAGE=ON -DCMAKE_CXX_COMPILER="g++-6" ..
    
 script:
   - make
@@ -50,7 +51,8 @@ script:
         bash run-tests.sh
       fi
     fi
-
+  - cd ..
+  - bash <(curl -s https://codecov.io/bash)
 # For Coveralls
 # after_success: 
   # - coveralls --exclude lib --exclude tests --gcov-options '\-lp'
