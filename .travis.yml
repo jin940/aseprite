@@ -37,7 +37,7 @@ addons:
 before_script:
   - mkdir build
   - cd build
-  - cmake .. -DENABLE_TESTS=ON -DENABLE_UI=$ENABLE_UI
+  - cmake .. -DENABLE_TESTS=ON -DENABLE_UI=$ENABLE_UI -DENABLE_COVERAGE=ON -DCMAKE_CXX_COMPILER="g++-6"
   #- cmake -DENABLE_COVERAGE=ON -DCMAKE_CXX_COMPILER="g++-6" ..
    
 script:
