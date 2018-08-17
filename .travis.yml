@@ -51,7 +51,7 @@ before_script:
   #- cmake -DENABLE_COVERAGE=ON -DCMAKE_CXX_COMPILER="g++-6" ..
    
 script:
-  - make && make test coverage
+  - make
   - |
     if ctest --output-on-failure ; then
       if [[ "$ENABLE_UI" == "OFF" ]]; then
