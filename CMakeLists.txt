@@ -84,7 +84,7 @@ option(ENABLE_STEAM       "Compile with Steam library" off)
 option(ENABLE_DEVMODE     "Compile vesion for developers" off)
 option(ENABLE_UI          "Compile UI (turn off to compile CLI-only version)" on)
 option(FULLSCREEN_PLATFORM "Enable fullscreen by default" off)
-option(ENABLE_COVERAGE     "Enable Coverage" off)
+option(ENABLE_COVERAGE     "Enable Coverage" on)
 set(CUSTOM_WEBSITE_URL "" CACHE STRING "Enable custom local webserver to check updates")
 
 if(NOT ENABLE_UI)
